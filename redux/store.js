@@ -5,7 +5,8 @@ const initialState = {
     content: '',
     methods: {},
     file: null,
-    processed: false
+    processed: false,
+    table: {}
 }
 
 export const store = createStore(reducer, initialState)

@@ -136,12 +136,21 @@
 }
 
 .table td {
+    min-width: 30px;
     border: 1px solid #000;
+}
+
+.table .TDCenter td {
+    text-align: center;
 }
 
 .table .head {
     background-color: rgba(255, 255, 0, 0.6);
     font-size: 8px;
+}
+
+.tableObject {
+    cursor: pointer;
 }
 
 .menuSeparator {
@@ -189,6 +198,7 @@
 .btnRed:hover {
     background-color: #ff0000;
 }
+
 .btnMagenta {
     background-color: #00ab79;
 }
@@ -209,7 +219,7 @@
     padding: 10px;
 }
 
-.menuArrow{
+.menuArrow {
     width: 16px;
     height: 100%;
     border: 1px solid #000;

@@ -15,11 +15,8 @@ export default function Home() {
     useEffect(()=>{
         store.dispatch({type: 'SET_FILE', file: store.getState().file})
     },[store.getState().file])
-    const handleSelected = (selected) => {
-        const res = readFile(selected.value)
-        console.log(res)
-    }
-    addStoreMethods({render, handleSelected})
+
+    addStoreMethods({render})
     return (
         <div className={styles.container}>
             <Menu/>

@@ -1,26 +1,12 @@
-import Tds from "./Tds";
 import styles from '../styles/Home.module.css';
-import getRowMax from "../helpers/getRowMax";
+import TableHeader from "./TableHeader";
+import TableContentWeekday from "./TableContentWeekday";
 
-export default function Table({data}) {
-    const rowMax = getRowMax(data);
-    const arr = [];
-    for (let i = 0; i < rowMax; i++) arr.push(i);
-    return <table className={styles.table} id={"timeTable"}>
+export default function Table() {
+    return <table className={styles.table}>
         <tbody>
-        <tr className={styles.head}>
-            {
-                arr.map((item, key) =>
-                    <td key={key}>{item}</td>)
-            }
-        </tr>
-        {
-            data.map((row, key) =>
-                <tr key={key}>
-                    <Tds row={row} rowMax={rowMax}/>
-                </tr>
-            )
-        }
+        <TableHeader/>
+        <TableContentWeekday day={1}/>
         </tbody>
     </table>
 }
