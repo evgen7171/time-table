@@ -43,7 +43,7 @@ export function TableTDObject({item, classKey, data, k, kk}) {
         else if (typeof item === 'object') return <>
             {
                 item.map(i => (
-                    <TDOrSelect selected={i}/>)
+                    <TDOrSelect selected={i} key={i}/>)
                 )
             }
         </>
